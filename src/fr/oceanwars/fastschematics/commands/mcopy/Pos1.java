@@ -13,6 +13,7 @@ public class Pos1 extends AbstractCommand {
     @Override
     public void execute(Player player, String[] args) {
         SelectionManager.getInstance().setPos1(player);
+        player.sendMessage("§aSuccessfuly set the pos2");
     }
 
     @Override

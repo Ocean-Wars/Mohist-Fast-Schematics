@@ -13,6 +13,7 @@ public class MCopy implements CommandExecutor {
     private final HashMap<String, AbstractCommand> subCommands = new HashMap<String, AbstractCommand>() {{
         put("pos1", new Pos1(0));
         put("pos2", new Pos2(0));
+        put("save", new Pos2(0));
     }};
 
     @Override
@@ -37,7 +38,7 @@ public class MCopy implements CommandExecutor {
     private void sendHelp(Player p) {
         p.sendMessage("§6/mcopy help§e: Display this help message");
         subCommands.forEach((arg, cmd) -> {
-            p.sendMessage("§6/mcopy " + arg + "§e: " + cmd.getHelp());
+            p.sendMessage("§6" + cmd.getUsage().replace("[command]", arg) + "§e: " + cmd.getHelp());
         });
     }
 }

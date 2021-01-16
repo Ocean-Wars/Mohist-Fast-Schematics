@@ -32,4 +32,13 @@ public abstract class AbstractCommand {
      * §6/mcopy [command]§e: getHelp()
      */
     public abstract String getHelp();
+
+    /**
+     * This allow us to set the usage of the command (in case there need one more arg)
+     * The [command] is getting substitute by the command name.
+     * @return The usage of the command
+     */
+    public String getUsage() {
+        return "/[command]";
+    }
 }
