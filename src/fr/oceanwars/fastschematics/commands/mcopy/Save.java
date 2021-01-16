@@ -18,7 +18,8 @@ public class Save extends AbstractCommand {
             player.sendMessage("§cPlease set your selection correctly with:");
             player.sendMessage("§6/mcopy pos1 §cand §6/mcopy pos2");
         } else {
-            SchematicsManager.getInstance().createSchematic(player, args[1]);
+            String path = SchematicsManager.getInstance().createSchematic(player, args[1]);
+            player.sendMessage("§aSuccessfully created mohist schematic at path: §6" + path);
         }
     }
 

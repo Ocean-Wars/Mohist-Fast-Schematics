@@ -10,6 +10,11 @@ public class PlayerSelection {
     public PlayerSelection() {
     }
 
+    public PlayerSelection(Location pos1, Location pos2) {
+        this.pos1 = pos1;
+        this.pos2 = pos2;
+    }
+
     public Location getPos1() {
         return pos1;
     }
