@@ -40,7 +40,7 @@ public final class SchematicsManager {
      */
     private String writeToFile(MSchematicData data, String fileName) {
         File target = new File(MohistSchematics.getInstance().getDataFolder(),
-                "schematics" + File.pathSeparator + fileName);
+                "schematics" + File.separator + fileName + ".mschematics");
         if (!target.getParentFile().exists())
             target.getParentFile().mkdirs();
 
