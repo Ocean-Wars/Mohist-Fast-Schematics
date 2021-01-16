@@ -1,9 +1,9 @@
 package fr.oceanwars.fastschematics;
 
-import fr.oceanwars.fastschematics.commands.MCopy;
+import fr.oceanwars.fastschematics.commands.mcopy.MCopy;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class FastSchematics extends JavaPlugin {
+public class MohistSchematics extends JavaPlugin {
 
     @Override
     public void onEnable() {
