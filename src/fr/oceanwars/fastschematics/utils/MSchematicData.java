@@ -73,6 +73,15 @@ public class MSchematicData implements Serializable {
 
     }
 
+    /**
+     * This method allow us to paste the MSchematicData
+     * // TODO: all paste optimization can be done there
+     * @param location The location of the player
+     */
+    public void paste(Location location) {
+        
+    }
+
     private class BlockData implements Serializable {
         private Material material;
         private byte data;
