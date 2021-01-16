@@ -36,6 +36,8 @@ To set your pos1 and pos2 of your selection. It sets the position below your fee
 To save your schematics run
 > /mcopy save "filename"
 
+It will create a "mohistschematic" (extension .mschematics) at path pluginfolder/mohistschematics/schematics/filename.mschematics.
+
 ### Paste your schematic
 
 To paste your schematic run
