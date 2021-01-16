@@ -1,8 +1,11 @@
 # Mohist-Fast-Schematics
 
-## What is this?
+## Why to use this?
 
-This repository contain my mohist plugin which allow to copy-paste blocks from a server to another without destroying the "ID" of blocks.
+This plugin is usefull only in the case that you want to transfer some map parts from a modded mohist server to another. It will create schematics
+that are compatible with modded servers (contrary to worldedit which completly breaks block ids).
+
+If you just want to do simple copy and paste things inside of your server, I recommand worldedit or FastAsyncWorldedit.
 
 ## Why I made this plugin?
 
