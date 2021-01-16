@@ -29,16 +29,23 @@ public final class SchematicsManager {
         PlayerSelection selection = SelectionManager.getInstance().getPlayerSelection(player);
         PlayerSelection newSelection = sanitizeSelection(selection);
         MSchematicData data = createData(player, newSelection);
-        writeToFile(data, fileName);
+        return writeToFile(data, fileName);
     }
 
-    private void writeToFile(MSchematicData data, String fileName) {
+    /**
+     * This method allow us to write to the file
+     * @param data The data that we have to write
+     * @param fileName The name of the file that we have to write to
+     * @return The path to the file
+     */
+    private String writeToFile(MSchematicData data, String fileName) {
         File target = new File(MohistSchematics.getInstance().getDataFolder(),
                 "schematics" + File.pathSeparator + fileName);
         if (!target.getParentFile().exists())
             target.getParentFile().mkdirs();
 
         FileUtils.writeObjectToFile(target, data);
+        return target.getAbsolutePath();
     }
 
     /**
