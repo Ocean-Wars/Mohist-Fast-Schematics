@@ -13,7 +13,7 @@ public class MCopy implements CommandExecutor {
     private final HashMap<String, AbstractCommand> subCommands = new HashMap<String, AbstractCommand>() {{
         put("pos1", new Pos1(0));
         put("pos2", new Pos2(0));
-        put("save", new Pos2(0));
+        put("save", new Save(0));
     }};
 
     @Override
