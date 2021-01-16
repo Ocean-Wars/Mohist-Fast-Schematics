@@ -41,4 +41,12 @@ public abstract class AbstractCommand {
     public String getUsage() {
         return "/[command]";
     }
+
+    /**
+     * If the command need one more argument, we set this to true.
+     * @return {code true} if the command require another argument, otherwise {@code false}
+     */
+    public boolean needMoreArg() {
+        return false;
+    }
 }

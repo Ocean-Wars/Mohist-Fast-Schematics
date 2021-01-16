@@ -27,9 +27,14 @@ public class MCopy implements CommandExecutor {
             sendHelp(p);
         } else {
             if (!subCommands.containsKey(args[0].toLowerCase())) {
-                p.sendMessage("§6Unknown command §c" + args[0] + " §6please run §c/mcopy help");
+                p.sendMessage("§cUnknown command §6" + args[0] + " §cplease run §6/mcopy help");
             } else {
-                subCommands.get(args[0]).execute(p, args);
+                if (subCommands.get(args[0]).needMoreArg() && !(args.length >= 2)) {
+                    p.sendMessage("§cThe subcommand §6" + args[0] + " §crequire 1 more argument.");
+                    p.sendMessage("§cPlease run §6/mcopy help §c for more information.");
+                } else {
+                    subCommands.get(args[0]).execute(p, args);
+                }
             }
         }
         return true;
