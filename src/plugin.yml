@@ -1,3 +1,9 @@
 name: MohistFastSchematics
 main: fr.oceanwars.fastschematics.FastSchematics
 version: 1.0.0
+commands:
+  mcopy:
+    description: "Allow you create a schematic"
+    usage: "/<command> pos1|pos2|save"
+    aliases: ["/mc"]
+    permission: fastschematic.admin
