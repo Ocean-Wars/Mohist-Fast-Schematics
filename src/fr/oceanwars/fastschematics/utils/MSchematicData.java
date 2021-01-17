@@ -79,7 +79,23 @@ public class MSchematicData implements Serializable {
      * @param location The location of the player
      */
     public void paste(Location location) {
-        
+        int xAdd = pos1.getX() - playerLocation.getX();
+        int yAdd = pos1.getY() - playerLocation.getY();
+        int zAdd = pos1.getZ() - playerLocation.getZ();
+
+        for (int x = 0; x < blockData.length; x++) {
+            for (int y = 0; y < blockData[0].length; y++) {
+                for (int z = 0; z < blockData[0][0].length; z++) {
+                    Block target = location.getWorld().getBlockAt(new Location(location.getWorld(),
+                            location.getBlockX() + xAdd + x,
+                            location.getBlockY() + yAdd + y,
+                            location.getBlockZ() + zAdd + z
+                    ));
+                    target.setType(blockData[x][y][z].material);
+                    target.setData(blockData[x][y][z].data);
+                }
+            }
+        }
     }
 
     private class BlockData implements Serializable {

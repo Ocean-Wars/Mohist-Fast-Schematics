@@ -125,4 +125,8 @@ public final class SchematicsManager {
     public MSchematicData getPlayerData(Player player) {
         return playerSchematics.get(player);
     }
+
+    public void removePlayerData(Player player) {
+        playerSchematics.remove(player);
+    }
 }

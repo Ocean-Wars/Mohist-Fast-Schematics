@@ -19,6 +19,7 @@ public class Paste extends AbstractCommand {
             return;
         }
         MSchematicData data = SchematicsManager.getInstance().getPlayerData(player);
+        SchematicsManager.getInstance().removePlayerData(player);
         data.paste(player.getLocation());
     }
 
