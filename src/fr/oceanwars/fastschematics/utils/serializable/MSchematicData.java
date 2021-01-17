@@ -85,15 +85,13 @@ public class MSchematicData implements Serializable {
         for (int x = 0; x < blockData.length; x++) {
             for (int y = 0; y < blockData[0].length; y++) {
                 for (int z = 0; z < blockData[0][0].length; z++) {
-                    /*
                     Block target = location.getWorld().getBlockAt(new Location(location.getWorld(),
                             location.getBlockX() + xAdd + x,
                             location.getBlockY() + yAdd + y,
                             location.getBlockZ() + zAdd + z
                     ));
                     target.setType(blockData[x][y][z].getMaterial());
-                    target.setData(blockData[x][y][z].getData());*/
-                    System.out.println("blockData[" + x + "][" + y + "][" + z + "]: " + blockData[x][y][z]);
+                    target.setData(blockData[x][y][z].getData());
                 }
             }
         }
