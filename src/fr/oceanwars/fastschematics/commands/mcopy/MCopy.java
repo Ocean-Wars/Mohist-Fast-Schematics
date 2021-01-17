@@ -14,7 +14,8 @@ public class MCopy implements CommandExecutor {
         put("pos1", new Pos1(0));
         put("pos2", new Pos2(0));
         put("save", new Save(0));
-        put("load", new Save(0));
+        put("load", new Load(0));
+        put("paste", new Paste(0));
     }};
 
     @Override
