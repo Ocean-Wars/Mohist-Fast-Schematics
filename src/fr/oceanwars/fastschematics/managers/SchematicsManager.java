@@ -2,7 +2,7 @@ package fr.oceanwars.fastschematics.managers;
 
 import fr.oceanwars.fastschematics.MohistSchematics;
 import fr.oceanwars.fastschematics.utils.FileUtils;
-import fr.oceanwars.fastschematics.utils.MSchematicData;
+import fr.oceanwars.fastschematics.utils.serializable.MSchematicData;
 import fr.oceanwars.fastschematics.utils.PlayerSelection;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;

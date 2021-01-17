@@ -2,7 +2,7 @@ package fr.oceanwars.fastschematics.commands.mcopy;
 
 import fr.oceanwars.fastschematics.commands.AbstractCommand;
 import fr.oceanwars.fastschematics.managers.SchematicsManager;
-import fr.oceanwars.fastschematics.utils.MSchematicData;
+import fr.oceanwars.fastschematics.utils.serializable.MSchematicData;
 import org.bukkit.entity.Player;
 
 public class Paste extends AbstractCommand {

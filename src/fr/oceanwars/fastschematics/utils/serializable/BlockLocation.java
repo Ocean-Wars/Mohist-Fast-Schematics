@@ -1,4 +1,4 @@
-package fr.oceanwars.fastschematics.utils;
+package fr.oceanwars.fastschematics.utils.serializable;
 
 import org.bukkit.Location;
 
