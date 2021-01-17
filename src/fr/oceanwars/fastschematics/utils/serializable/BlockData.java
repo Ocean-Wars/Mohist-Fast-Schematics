@@ -3,7 +3,9 @@ package fr.oceanwars.fastschematics.utils.serializable;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 
-public class BlockData {
+import java.io.Serializable;
+
+public class BlockData implements Serializable {
     private Material material;
     private byte data;
 
