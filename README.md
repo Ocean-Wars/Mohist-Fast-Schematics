@@ -1,4 +1,4 @@
-# Mohist-Fast-Schematics
+# Mohist-Schematics
 
 ## Why to use this?
 
