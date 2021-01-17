@@ -18,7 +18,7 @@ If you try to load a map with modded blocks inside which has a different main wo
 That is due to the fact that minecraft only store integer id of blocks, which are by the way deprecated in spigot. Since integer id of blocks differs from a modded server
 to another moded server (due to main map difference). Then it mean that if you try to copy paste with schematics, you will get different outputs.
 
-Thats why I made this plugin: It allows you to create schematics that store the string material value of a block instead of the id of it.
+Thats why I made this plugin: It allows you to create schematics that store the material value of a block instead of the id of it.
 
 ## How to install?
 
@@ -59,5 +59,5 @@ Feel free to contribute to this repository if you want :)
 I made this plugin only to paste my spawn but there could be some improvements that can be made:
 
 * Improve the speed: Currently this plugin can paste up to 60k blocks per second, with some methods described there: [https://www.spigotmc.org/threads/methods-for-changing-massive-amount-of-blocks-up-to-14m-blocks-s.395868/](https://www.spigotmc.org/threads/methods-for-changing-massive-amount-of-blocks-up-to-14m-blocks-s.395868/)
-it can maybe be faster :)
+it can maybe be faster :) You can optimized the fonction "paste" of MSchematicData
 * Add some "axe" selection that would allow you to left click and right click on blocks that you want to copy and paste.
