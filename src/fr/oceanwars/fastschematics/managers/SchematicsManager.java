@@ -65,7 +65,11 @@ public final class SchematicsManager {
     private String writeToFile(MSchematicData data, String fileName) {
         File target = getFileFromFileName(fileName);
 
-        FileUtils.writeObjectToFile(target, data);
+        Bukkit.getScheduler().runTaskAsynchronously(MohistSchematics.getInstance(), () -> {
+            System.out.println("Writing to file asynchronously, please do not stop the server!");
+            FileUtils.writeObjectToFile(target, data);
+            System.out.println("Writting finish!");
+        });
         return target.getAbsolutePath();
     }
 

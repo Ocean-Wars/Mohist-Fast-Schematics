@@ -1,9 +1,11 @@
 package fr.oceanwars.fastschematics.commands.mcopy;
 
+import fr.oceanwars.fastschematics.MohistSchematics;
 import fr.oceanwars.fastschematics.commands.AbstractCommand;
 import fr.oceanwars.fastschematics.managers.SchematicsManager;
 import fr.oceanwars.fastschematics.utils.FileUtils;
 import fr.oceanwars.fastschematics.utils.serializable.MSchematicData;
+import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
 import java.io.File;
@@ -23,11 +25,17 @@ public class Load extends AbstractCommand {
                     "folder.");
             return;
         }
-        MSchematicData data = (MSchematicData) FileUtils.readObjectFromFile(file);
-        SchematicsManager.getInstance().setPlayerSchematic(data, player);
-        player.sendMessage("§aSuccessfully loaded schematic, you can now run §6/mcopy paste §ato paste your " +
-                "schematic!");
-        player.sendMessage("§aYou have 1 minute to run this command.");
+        player.sendMessage("§aWe are currently loading the schematic asynchronously, please wait until its finish.");
+        Bukkit.getScheduler().runTaskAsynchronously(MohistSchematics.getInstance(), () -> {
+            System.out.println("Starting loading of schematic");
+            MSchematicData data = (MSchematicData) FileUtils.readObjectFromFile(file);
+            System.out.println("Schematic successfully loaded!");
+            Bukkit.getScheduler().runTask(MohistSchematics.getInstance(), () -> {
+                player.sendMessage("§aSuccessfully loaded schematic, you can now run §6/mcopy paste §ato paste your " +
+                        "schematic!");
+                SchematicsManager.getInstance().setPlayerSchematic(data, player);
+            });
+        });
     }
 
     @Override

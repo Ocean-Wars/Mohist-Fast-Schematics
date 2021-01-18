@@ -20,6 +20,7 @@ public class Save extends AbstractCommand {
         } else {
             String path = SchematicsManager.getInstance().createSchematic(player, args[1]);
             player.sendMessage("§aSuccessfully created mohist schematic at path: §6" + path);
+            player.sendMessage("§aPlease wait until you see a console message saying that the load is finished");
         }
     }
 
