@@ -22,7 +22,7 @@ Thats why I made this plugin: It allows you to create schematics that store the 
 
 ## How to install?
 
-Somewhere there is a "release" of the plugin, download it and put it inside of your plugin folder.
+Download it on the release corner at right or here is the link: [v1.0.0](https://github.com/Ocean-Wars/Mohist-Schematics/releases/tag/v1.0.0), download it and put it inside of your plugin folder.
 
 ## How to use this plugin?
 
