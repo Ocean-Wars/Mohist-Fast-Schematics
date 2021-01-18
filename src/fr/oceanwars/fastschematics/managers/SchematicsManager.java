@@ -115,7 +115,9 @@ public final class SchematicsManager {
         playerSchematics.put(player, mschematic);
 
         // we remove the player schematic after 1 min to prevent memory leaks.
-        Bukkit.getScheduler().runTaskLater(MohistSchematics.getInstance(), () -> playerSchematics.remove(player), 1200);
+        // we comment this line because it might crash and take time until loading is complete
+        // Bukkit.getScheduler().runTaskLater(MohistSchematics.getInstance(), () -> playerSchematics.remove(player),
+                // 1200);
     }
 
     public boolean playerHasData(Player player) {

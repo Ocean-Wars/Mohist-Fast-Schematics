@@ -6,7 +6,7 @@ import org.bukkit.block.Block;
 import java.io.Serializable;
 
 public class BlockData implements Serializable {
-    private Material material;
+    private String material;
     private byte data;
 
     /**
@@ -22,16 +22,16 @@ public class BlockData implements Serializable {
     }
 
     public BlockData(Material material, byte data) {
-        this.material = material;
+        this.material = material.toString();
         this.data = data;
     }
 
     public Material getMaterial() {
-        return material;
+        return Material.getMaterial(material);
     }
 
     public void setMaterial(Material material) {
-        this.material = material;
+        this.material = material.toString();
     }
 
     public byte getData() {
